@@ -38,4 +38,4 @@ script:
   #- php tests/getjoomla.php
   #- sudo chmod 777 -R /home/travis/build/Testselenium/
   - php vendor/bin/codecept build
-  - php vendor/bin/codecept run 
+  - php vendor/bin/codecept run --steps
