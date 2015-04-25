@@ -3,7 +3,7 @@
 <!-- This script clones joomla2 and joomla3 at test/system/ to be used          -->
 <!-- by the system tests                                                        -->
 <!-- ==================================================================         -->
-<project name="com_redcore" default="getjoomla">
+<project name="ijoomer-adv-joomla" default="getjoomla">
 
     <property name="repo.dir.joomla2" value="${project.basedir}/system/joomla-cms2/" />
     <!-- convert into absolute path -->

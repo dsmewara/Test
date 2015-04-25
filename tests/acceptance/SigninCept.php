@@ -1,6 +1,6 @@
 <?php
 $I = new AcceptanceTester($scenario);
-$I->wantTo('log in as regular user');
+/*$I->wantTo('log in as regular user');
 $I->amOnPage('/administrator/index.php');
 $I->fillField("//*[@id='mod-login-username']", "admin");
 $I->fillField("//*[@id='mod-login-password']", "admin");
@@ -34,5 +34,5 @@ $I->click('.//*[@id=\'submenu\']/li[6]/a');
 $I->wait(1);
 $I->see('Reports');
 $I->moveback();
-$I->wait(5);
+$I->wait(5);*/
 ?> 	
