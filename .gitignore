@@ -39,3 +39,4 @@ vendor
 #composer.lock
 
 tests/_output/*
+acceptance.suite.yml

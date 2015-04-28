@@ -42,8 +42,8 @@ script:
   - php vendor/phing/phing/bin/phing -f tests/getjoomla.xml # Get Joomla CMS for System Tests
   #- php tests/getjoomla.php
   - sudo chmod 777 -R /home/travis/build/Test/test1/
-  - sudo ln -s /home/travis/build/Test/test1/tests/system/joomla-cms2/ /var/www/joomla-cms2 #Add joomla 2 to apache htdocs
-  - sudo ln -s /home/travis/build/Test/test1/tests/system/joomla-cms3/ /var/www/jcms3.4 #Add joomla 3 to apache htdocs
+  - sudo ln -s /home/travis/build/dsmewara/Test/test1/tests/system/joomla-cms2/ /var/www/joomla-cms2 #Add joomla 2 to apache htdocs
+  - sudo ln -s /home/travis/build/dsmewara/Test/test1/tests/system/joomla-cms3/ /var/www/jcms3.4 #Add joomla 3 to apache htdocs
   - php vendor/bin/codecept build
   - php vendor/bin/codecept run acceptance -g $GROUP --env $ENV --steps
   - php vendor/bin/codecept run acceptance -g Joomla3 --env joomla3 --steps
