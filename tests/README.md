@@ -1,5 +1,5 @@
-Testing ijoomer
-==========
+Testing ijoomer advance 
+===========================
 
 ## Getting Joomla
 The first step to execute the System tests at ijoomer is to get the two versions of the Joomla CMS: 2.5 and 3.x. To do it automatically you can execute the following command from the root of the repository:
