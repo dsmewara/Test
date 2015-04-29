@@ -27,7 +27,7 @@ class InstallJoomla3DatabaseSteps extends InstallJoomla3Steps
 	{
 		$I = $this;
 		$cfg = $I->getConfig();
-		//$this->setDatabaseType($cfg['db_type']);
+		$this->setDatabaseType($cfg['db_type']);
 		$this->setField('Host Name', $cfg['db_host']);
 		$this->setField('Username', $cfg['db_user']);
 		$this->setField('Password', $cfg['db_pass']);
@@ -35,7 +35,6 @@ class InstallJoomla3DatabaseSteps extends InstallJoomla3Steps
 		$this->setField('Table Prefix', $cfg['db_prefix']);
 		$this->click(\InstallJoomla3ManagerPage::$removeOldDatabase);
 
-		$I->click('Next');
 		$I->click('Next');
 		$I->waitForText(\InstallJoomla3ManagerPage::$finalisationPage);
 	}
