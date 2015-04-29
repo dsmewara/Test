@@ -26,7 +26,7 @@ class InstallationJ3Group extends \Codeception\Platform\Group
 	public function _before(TestEvent $e)
 	{
 		// Remove Joomla 3 CMS old configuration.php file before do a clean joomla installation
-		$joomla3ConfigurationFile = 'tests/system/jcms3.4/configuration.php';
+		$joomla3ConfigurationFile = 'tests/system/joomla-cms3/configuration.php';
 
 		if (file_exists($joomla3ConfigurationFile))
 		{
