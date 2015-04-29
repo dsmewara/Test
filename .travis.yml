@@ -41,7 +41,7 @@ script:
   - php vendor/phing/phing/bin/phing -f tests/getjoomla.xml # Get Joomla CMS for System Tests
   #- php tests/getjoomla.php
   - sudo chmod 777 -R /home/travis/build/dsmewara/Test/
-  - sudo ln -s /home/travis/build/dsmewara/Test/tests/system/joomla-cms3/ /var/www/jcms3.4 #Add joomla 3 to apache htdocs
+  - sudo ln -s /home/travis/build/dsmewara/Test/tests/system/joomla-cms3/ /var/www/html/Joomla_3.4.1 #Add joomla 3 to apache htdocs
   - php vendor/bin/codecept build
   - php vendor/bin/codecept run acceptance -g Joomla3 --env joomla3 --steps
   #- php vendor/bin/codecept run --steps
