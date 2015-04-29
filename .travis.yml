@@ -34,6 +34,10 @@ before_script:
 
 script:
   #- phpcs --report=summary --extensions=php -p -n --standard=.build/phpcs/Joomla plugins/
+  - php .travis/phppec.php component/ libraries/ modules/ plugins/ #parse error checker
+  - php .travis/phpcs.php # Code Style error checker
+  - php .travis/misseddebugcodechecker.php component/ libraries/ modules/ plugins/ # Missed debug code checker
+  #- php .travis/phpmd.php # PHP mess detector code checker
   #- phpcs --report=summary --extensions=php -p -n --standard=.build/phpcs/Joomla component/
   #- sudo sed -i -e "s,AllowOverride[ ]None,AllowOverride All,g" /etc/apache2/sites-available/default
   #- sudo /etc/init.d/apache2 restart
@@ -44,8 +48,6 @@ script:
   - sudo ln -s /home/travis/build/dsmewara/Test/tests/system/joomla-cms3/ /var/www/joomla-cms3 #Add joomla 3 to apache htdocs
   - sudo sed -i -e "s,AllowOverride[ ]None,AllowOverride All,g" /etc/apache2/sites-available/default
   - sudo /etc/init.d/apache2 restart
-  - php .travis/traviswebserverckecker.php http://localhost/joomla-cms2/installation/index.php # Test apache
-  - php .travis/traviswebserverckecker.php http://localhost/joomla-cms3/installation/index.php # Test apache
   - php vendor/bin/codecept build
   - php vendor/bin/codecept run acceptance -g Joomla3 --env joomla3 --steps
  
