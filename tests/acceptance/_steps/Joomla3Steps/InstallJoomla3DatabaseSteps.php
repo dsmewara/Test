@@ -35,9 +35,9 @@ class InstallJoomla3DatabaseSteps extends InstallJoomla3Steps
 		$this->setField('Table Prefix', $cfg['db_prefix']);
 		$this->click(\InstallJoomla3ManagerPage::$removeOldDatabase);
 
-		$I->wantTo('Give permission to installation folder');
+		echo 'Give permission to installation folder';
 		shell_exec('sudo chmod /var/www/html/jcms3.4', 0777);
-		$I->see('Permission given to installation folder' . fileperms('/var/www/html/jcms3.4'));
+		echo 'Permission given to installation folder' . fileperms('/var/www/html/jcms3.4');
 
 		$I->click('Next');
 
