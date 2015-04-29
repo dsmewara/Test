@@ -37,10 +37,12 @@ class InstallJoomla3FinalisationSteps extends InstallJoomla3Steps
 			$this->setSampleData('None');
 		}
 
+		shell_exec('sudo chmod /var/www/html/jcms3.4', 0777);
+
 		$I->click('Install');
         $I->waitForElement(\InstallJoomla3ManagerPage::$removeInstallationFolder, 60);
         //$I->waitForElement('//*[@id=\'adminForm\']/div[3]/input',60);
-        //shell_exec('sudo chmod /var/www/html/jcms3.4', 0777);
+
 		//$I->wait(5);
         //$I->click('//*[@id=\'adminForm\']/div[3]/input');
         //$I->wait(1);
