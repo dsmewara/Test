@@ -27,7 +27,7 @@ class InstallJoomla3DatabaseSteps extends InstallJoomla3Steps
 	{
 		$I = $this;
 		$cfg = $I->getConfig();
-		$this->setDatabaseType($cfg['db_type']);
+		//$this->setDatabaseType($cfg['db_type']);
 		$this->setField('Host Name', $cfg['db_host']);
 		$this->setField('Username', $cfg['db_user']);
 		$this->setField('Password', $cfg['db_pass']);
