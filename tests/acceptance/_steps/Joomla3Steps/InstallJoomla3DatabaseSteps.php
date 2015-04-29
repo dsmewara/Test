@@ -39,7 +39,7 @@ class InstallJoomla3DatabaseSteps extends InstallJoomla3Steps
 
 		$I->wantTo('Give permission to installation folder');
 		shell_exec('sudo chmod /var/www/html/jcms3.4', 0777);
-		$I->see('Permission given to installation folder');
+		$I->see('Permission given to installation folder' . fileperms('/var/www/html/jcms3.4'));
 
 		$I->waitForText(\InstallJoomla3ManagerPage::$finalisationPage);
 	}
