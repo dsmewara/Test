@@ -42,7 +42,7 @@ script:
   - php vendor/phing/phing/bin/phing -f tests/getjoomla.xml # Get Joomla CMS for System Tests
   #- php tests/getjoomla.php
   - sudo chmod 777 -R /home/travis/build/dsmewara/Test/
-  - sudo ln -s /home/travis/build/dsmewara/Test/tests/system/joomla-cms3/ /var/www/joomla-cms3 #Add joomla 3 to apache htdocs
+  - sudo ln -s /home/travis/build/dsmewara/Test/tests/system/joomla-cms3.4/ /var/www/joomla-cms3.4 #Add joomla 3 to apache htdocs
   - sudo sed -i -e "s,AllowOverride[ ]None,AllowOverride All,g" /etc/apache2/sites-available/default
   - sudo /etc/init.d/apache2 restart
   - php vendor/bin/codecept build
