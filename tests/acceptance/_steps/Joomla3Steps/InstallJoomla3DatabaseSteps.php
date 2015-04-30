@@ -36,7 +36,7 @@ class InstallJoomla3DatabaseSteps extends InstallJoomla3Steps
 		$this->click(\InstallJoomla3ManagerPage::$removeOldDatabase);
 
 		$I->click('Next');
-		$I->click('Next');
+		
 
 		$I->waitForText(\InstallJoomla3ManagerPage::$finalisationPage);
 	}
