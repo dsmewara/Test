@@ -3,6 +3,9 @@ language: php
 php:
   - 5.4
 
+env:
+ - GROUP=Joomla3 ENV=joomla3
+
 before_script:
   #- pyrus install pear/PHP_CodeSniffer-1.5.3
   - phpenv rehash
@@ -31,11 +34,18 @@ before_script:
 
 script:
   #- phpcs --report=summary --extensions=php -p -n --standard=.build/phpcs/Joomla plugins/
+  #- php .travis/phpmd.php # PHP mess detector code checker
   #- phpcs --report=summary --extensions=php -p -n --standard=.build/phpcs/Joomla component/
   #- sudo sed -i -e "s,AllowOverride[ ]None,AllowOverride All,g" /etc/apache2/sites-available/default
   #- sudo /etc/init.d/apache2 restart
+  - mv tests/acceptance.suite.dist.yml tests/acceptance.suite.yml
   - php vendor/phing/phing/bin/phing -f tests/getjoomla.xml # Get Joomla CMS for System Tests
   #- php tests/getjoomla.php
-  #- sudo chmod 777 -R /home/travis/build/Testselenium/
+  - sudo chmod 777 -R /home/travis/build/dsmewara/Test/
+  - sudo ln -s /home/travis/build/dsmewara/Test/tests/system/joomla-cms3/ /var/www/joomla-cms3 #Add joomla 3 to apache htdocs
+  - sudo sed -i -e "s,AllowOverride[ ]None,AllowOverride All,g" /etc/apache2/sites-available/default
+  - sudo /etc/init.d/apache2 restart
   - php vendor/bin/codecept build
-  - php vendor/bin/codecept run --steps
+  - php vendor/bin/codecept run acceptance -g Joomla3 --env joomla3 --steps
+ 
+
