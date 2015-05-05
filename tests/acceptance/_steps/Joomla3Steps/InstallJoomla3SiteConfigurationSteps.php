@@ -37,7 +37,7 @@ class InstallJoomla3SiteConfigurationSteps extends InstallJoomla3Steps
 		$this->setField('Confirm Admin Password', $cfg['password']);
 
 		$I->click('Next');
-		$I->click('Next');
+		//$I->click('Next');
 
 		$I->waitForText(\InstallJoomla3ManagerPage::$databaseConfigurationPage);
 	}
