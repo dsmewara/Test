@@ -37,7 +37,7 @@ script:
   #- php .travis/phpcs.php # Code Style error checker
   #- php .travis/misseddebugcodechecker.php component/ libraries/ modules/ plugins/ # Missed debug code checker
   #- phpcs --report=summary --extensions=php -p -n --standard=.build/phpcs/Joomla plugins/
-  - php .travis/phpmd.php # PHP mess detector code checker
+  #- php .travis/phpmd.php # PHP mess detector code checker
   #- phpcs --report=summary --extensions=php -p -n --standard=.build/phpcs/Joomla component/
   #- sudo sed -i -e "s,AllowOverride[ ]None,AllowOverride All,g" /etc/apache2/sites-available/default
   #- sudo /etc/init.d/apache2 restart
