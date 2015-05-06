@@ -10,10 +10,8 @@
 	},
 	"require": {
 		"php": ">=5.3.10",
-		"squizlabs/php_codesniffer": "1.*",
         "phpmd/phpmd": "*",
 		"codeception/codeception": "*",
-		"phing/phing": "2.9.*@dev",
-		"alebear/versioncontrol_git": "dev-master"
+		"phing/phing": "2.9.*@dev"
 	}
 }
