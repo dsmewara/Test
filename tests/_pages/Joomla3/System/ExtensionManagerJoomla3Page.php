@@ -36,9 +36,9 @@ class ExtensionManagerJoomla3Page
 
 	public static $firstCheck = "//input[@id='cb0']";
 
-	public static $extensionNameLink = "//a[contains(text(),'Name')]";
+	public static $extensionName = "//a[contains(text(),'Name')]";
 
-	public static $extensionTable = "//form[@id='adminForm']/div/table/tbody/tr[1]/td[2]/label/span";
+	public static $extensionTable = '//form[@id=\'adminForm\']/div/table/tbody/tr[1]/td[2]/label/span';
 
 	public static $extensionTableJ2 = "//form[@id='adminForm']/table/tbody/tr[1]/td[2]/span";
 
