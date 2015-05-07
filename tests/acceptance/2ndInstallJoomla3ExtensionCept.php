@@ -17,6 +17,6 @@ $config = $I->getConfig();
 $className = 'AcceptanceTester\InstallExtension' . $config['env'] . 'Steps';
 $I = new $className($scenario);
 
-$I->installExtension('redCORE');
-$I->wantTo('Install redCORE demo data');
+$I->installExtension('ijoomeradv');
+$I->wantTo('Install ijoomer demo data');
 $I->installSampleData();

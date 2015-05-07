@@ -23,4 +23,5 @@ class LoginManagerJoomla3Page
 	public static $password = "passwd";
 
 	public static $loginSuccessCheck = "//a//span[text() = 'Category Manager']";
+	//public static $loginSuccessCheck1 = "//a[text()='Extensions']";
 }
