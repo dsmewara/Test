@@ -33,5 +33,10 @@ class LoginJoomla3Steps extends \AcceptanceTester
 		$I->fillField(\LoginManagerJoomla3Page::$password, $config['password']);
 		$I->click('Log in');
 		$I->see('Category Manager', \LoginManagerJoomla3Page::$loginSuccessCheck);
+		// $I->click('//a[text()=\'Components \']');
+		// $I->moveMouseOver('//a[text()=\'iJoomer Advance\']');
+		// $I->see('Extensions', \LoginManagerJoomla3Page::$loginSuccessCheck1);
+		// $I->click('//a[text()=\'Extensions \']');
+		
 	}
 }

@@ -32,18 +32,18 @@ class UninstallJoomla3ExtensionSteps extends \AcceptanceTester
 		$I->click("Manage");
 		$I->fillField(\ExtensionManagerJoomla3Page::$extensionSearchJ3, $extensionName);
 		$I->click(\ExtensionManagerJoomla3Page::$searchButtonJ3);
-		/*$name = $I->grabTextFrom(\ExtensionManagerJoomla3Page::$extensionTable);
+		$name = $I->grabTextFrom(\ExtensionManagerJoomla3Page::$extensionTable);
 
 		while (strtolower($name) != strtolower($extensionName))
 		{
 			$I->click(\ExtensionManagerJoomla3Page::$firstCheck);
 			$I->click("Uninstall");
 			$I->seeElement(\ExtensionManagerJoomla3Page::$uninstallSuccessMessageJ3);
-			//$name = $I->grabTextFrom(\ExtensionManagerJoomla3Page::$extensionTable);
+			$name = $I->grabTextFrom(\ExtensionManagerJoomla3Page::$extensionTable);
 		}
 		
 		$I->click(\ExtensionManagerJoomla3Page::$firstCheck);
 		$I->click("Uninstall");
-		$I->seeElement(\ExtensionManagerJoomla3Page::$uninstallSuccessMessageJ3);*/
+		$I->seeElement(\ExtensionManagerJoomla3Page::$uninstallSuccessMessageJ3);
 	}
 }
