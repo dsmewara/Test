@@ -16,6 +16,6 @@ $I->wantTo('Install Extension');
 $I->doAdminLogin();
 $I = new AcceptanceTester\InstallExtensionJoomla2Steps($scenario);
 
-$I->installExtension('redCORE');
-$I->wantTo('Install redCORE demo data');
+$I->installExtension('ijoomeradv');
+$I->wantTo('Install ijoomeradv demo data');
 $I->installSampleData();
