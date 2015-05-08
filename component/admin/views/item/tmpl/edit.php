@@ -268,3 +268,4 @@ if (JRequest::getVar('ajax'))
 		<input type="hidden" id="extData" name="extData" value="<?php echo $app->getUserState('com_ijoomeradv.edit.item.data'); ?>"/>
 	</div>
 </form>
+?>

@@ -33,6 +33,9 @@ before_script:
   - composer update
 
 script:
+  #- php .travis/phppec.php component/ libraries/ modules/ plugins/ #parse error checker
+  #- php .travis/phpcs.php # Code Style error checker
+  #- php .travis/misseddebugcodechecker.php component/ libraries/ modules/ plugins/ # Missed debug code checker
   #- phpcs --report=summary --extensions=php -p -n --standard=.build/phpcs/Joomla plugins/
   #- php .travis/phpmd.php # PHP mess detector code checker
   #- phpcs --report=summary --extensions=php -p -n --standard=.build/phpcs/Joomla component/

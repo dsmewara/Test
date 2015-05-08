@@ -2,15 +2,15 @@
 /**
  * redCORE soap helper test
  *
- * @package    Redcore.UnitTest
- * @copyright  Copyright (C) 2008 - 2015 redCOMPONENT.com
+ * @package    ijoomer.UnitTest
+ * @copyright  Copyright (C) 2008 - 2015 ijoomer.com
  * @license    GNU General Public License version 2 or later
  */
 
 /**
  * Test class for Soap Server
  *
- * @package  Redcore.UnitTest
+ * @package  ijoomer.UnitTest
  * @since    1.4
  */
 class soapTest
