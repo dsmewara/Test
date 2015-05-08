@@ -24,6 +24,8 @@ class ExtensionManagerJoomla3Page
 
 	public static $installSuccessMessage = "Installing component was successful.";
 
+	public static $installSuccessMessageijoomer="//a[text()='iJoomer Advance']";
+
 	public static $installDemoContent = "//input[@value='Install Demo Content']";
 
 	public static $demoDataInstallSuccessMessage = "Sample Data Installed Successfully";
