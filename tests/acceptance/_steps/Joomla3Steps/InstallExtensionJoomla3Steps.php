@@ -36,6 +36,13 @@ class InstallExtensionJoomla3Steps extends \AcceptanceTester
 		$I->click(\ExtensionManagerJoomla3Page::$installButton);
 		//$I->waitForText(\ExtensionManagerJoomla3Page::$installSuccessMessage, 60);
 		//$I->see(\ExtensionManagerJoomla3Page::$installSuccessMessage);
+		$I->seeElement(\ExtensionManagerJoomla3Page::$installSuccessMessageJ3);
+        $I->wait(2);
+		$I->click('Components');
+		$I->wait(2);
+		$I->see('iJoomer Advance');
+		$I->click('iJoomer Advance');
+		$I->wait(10);
 	}
 
 	/**

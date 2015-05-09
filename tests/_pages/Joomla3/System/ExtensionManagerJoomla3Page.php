@@ -18,11 +18,15 @@ class ExtensionManagerJoomla3Page
 	// Include url of current page
 	public static $URL = '/administrator/index.php?option=com_installer';
 
-	public static $extensionDirectoryPath = "#install_directory";
+	public static $extensionDirectoryPath = "install_directory";
 
 	public static $installButton = "//*[@id='directory']/fieldset/div[2]/input";
 
+	public static $installSuccessMessageJ3="//p[contains(text(),'successful')]";
+
 	public static $installSuccessMessage = "Installing component was successful.";
+
+	public static $installSuccessMessageijoomer="//a[text()='iJoomer Advance']";
 
 	public static $installDemoContent = "//input[@value='Install Demo Content']";
 
@@ -34,11 +38,11 @@ class ExtensionManagerJoomla3Page
 
 	public static $checkAll = "//input[@onclick='Joomla.checkAll(this)']";
 
-	public static $firstCheck = "//input[@id='cb0']";
+	public static $firstCheck = "//input[@name='checkall-toggle']";
 
 	public static $extensionName = "//a[contains(text(),'Name')]";
 
-	public static $extensionTable = '//form[@id=\'adminForm\']/div/table/tbody/tr[1]/td[2]/label/span';
+	public static $extensionTable = "//form[@id='adminForm']/div/table/tbody/tr[1]/td[2]/label/span";
 
 	public static $extensionTableJ2 = "//form[@id='adminForm']/table/tbody/tr[1]/td[2]/span";
 
@@ -59,4 +63,8 @@ class ExtensionManagerJoomla3Page
 	public static $searchButtonJ3 = "//button[@type='submit' and @data-original-title='Search']";
 
 	public static $searchButtonJ2 = "//button[@class='btn' and @type='submit' and contains(text(),'Search')]";
+
+
+
+
 }
