@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package     ijoomer
  * @subpackage  Page Class
@@ -7,21 +8,19 @@
  */
 
 /**
- * Class LoginManagerJoomla3Page
+ * Class CategoryManagerJ3Page
  *
  * @since  1.4
  *
  * @link   http://codeception.com/docs/07-AdvancedUsage#PageObjects
  */
-class LoginManagerJoomla3Page
+class ExtensionManagerJ3Page
 {
 	// Include url of current page
-	public static $URL = '/administrator/index.php';
+	public static $URL = 'administrator/index.php?option=com_ijoomeradv&view=extensions&layout=manage';
 
-	public static $userName = "username";
+	public static $ExtensionName = "//*[@id='editcell']/table/thead/tr/th[4]";
 
-	public static $password = "passwd";
+	public static $checkAll = "//input[@onclick='Joomla.isChecked(this.checked);']";
 
-	public static $loginSuccessCheck = "//a//span[text() = 'Category Manager']";
-	//public static $loginSuccessCheck1 = "//a[text()='Extensions']";
 }
