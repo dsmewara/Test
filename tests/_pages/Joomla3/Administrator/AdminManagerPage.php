@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
  * @package     ijoomer
  * @subpackage  Page Class
@@ -19,7 +19,7 @@ class AdminManagerPage
 	public static $allExtensionPages = array (
 		
 		'Extension' => '/administrator/index.php?option=com_ijoomeradv&view=extensions',
-		'Menu Manager' => '/administrator/index.php?option=com_ijoomeradv&view=menus'
-		//'Menu items' => '/administrator/index.php?option=com_ijoomeradv&view=items'
+		'Menu Manager' => '/administrator/index.php?option=com_ijoomeradv&view=menus',
+		'Menu items' => '/administrator/index.php?option=com_ijoomeradv&view=items'
 	);
 }
