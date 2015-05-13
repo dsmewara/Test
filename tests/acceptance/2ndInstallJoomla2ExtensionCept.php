@@ -7,9 +7,7 @@
  */
 $scenario->group('Joomla2');
 
-$I = new AcceptanceTester\GlobalConfigurationManagerJoomla3Steps($scenario);
-$I->wantTo('Set Error Reporting Level');
-$I->setErrorReportingLevel();
+
 
 $I = new AcceptanceTester($scenario);
 $config = $I->getConfig();

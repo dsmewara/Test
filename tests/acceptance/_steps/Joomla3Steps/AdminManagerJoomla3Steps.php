@@ -1,8 +1,8 @@
 <?php
 /**
- * @package     RedShop
+ * @package     ijoomer
  * @subpackage  Step Class
- * @copyright   Copyright (C) 2008 - 2015 redCOMPONENT.com. All rights reserved.
+ * @copyright   Copyright (C) 2008 - 2015 ijoomer.com. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 namespace AcceptanceTester;
@@ -27,7 +27,7 @@ class AdminManagerJoomla3Steps extends \AcceptanceTester
 			{
 				$haystack = strip_tags($webdriver->getPageSource());
 
-				return (bool) (stripos($haystack, "Notice:") || stripos($haystack, "Warning:"));
+				return (bool) (stripos($haystack, "Notice:") || stripos($haystack, "Warning:") || stripos($haystack, "Parse error:"));
 
 			}
 		);
@@ -40,7 +40,7 @@ class AdminManagerJoomla3Steps extends \AcceptanceTester
 	 *
 	 * @return void
 	 */
-	public function CheckAllLinks()
+	public function CheckAllLinksijoomer()
 	{
 		$I = $this;
 
